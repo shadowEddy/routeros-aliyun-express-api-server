@@ -10,5 +10,5 @@ app.use("/", api);
 app.use(errorHandler());
 
 app.listen(PORT, () => {
-    console.log(getTime(), `Aliyun DDNS api server is listening at http://localhost:${PORT}`)
+    console.log(getTime(), `Aliyun DDNS api server is listening at http://0.0.0.0:${PORT}`)
 })
