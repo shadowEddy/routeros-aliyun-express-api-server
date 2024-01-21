@@ -93,7 +93,7 @@ ddns.post("/", async (req, res) => {
             console.log(getTime(), req.body.DomainName, "record doesn't exist, adding...")
             await addRecord(subDomain, mainDomain, req.body.ip, client);
             console.log(getTime(), req.body.DomainName, "record added, dns record is pointing to ", req.body.ip);
-            res.status(201).send("0");
+            res.status(200).send("0");
         }
 
         // check if record exists
@@ -112,7 +112,7 @@ ddns.post("/", async (req, res) => {
                 } else {
                     await updateRecord(RecordId, subDomain, req.body.ip, client);
                     console.log(getTime(), req.body.DomainName, "record updated, dns record is pointing to", req.body.ip);
-                    res.status(201).send("0");
+                    res.status(200).send("0");
                 }
             }
         }
