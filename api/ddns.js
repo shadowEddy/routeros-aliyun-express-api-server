@@ -1,6 +1,6 @@
 const express = require("express");
 const Core = require('@alicloud/pop-core');
-var ddns = express.Router();
+const ddns = express.Router();
 
 const { getTime } = require("../util")
 
